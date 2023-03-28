@@ -354,7 +354,7 @@ sub run_script {
 	if (@$rcache == 0) {
 	    die "panic: script $id evaluation recurses. why?";
 	}
-	return @$rcache->[0];
+	return @{$rcache->[0]};
     } else {
 	$result_cache[$id] = [];
     }
